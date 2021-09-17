@@ -75,7 +75,7 @@ var yMaxBotao3 = yMinBotao3 + alturaBotao;
 var yMinBotao4 = yMinBotao+370;
 var yMaxBotao4 = yMinBotao4+alturaBotao;
 
-var tela = 1;
+var tela = 0.1;
 //var tela = 8;
 //______________________________________________
 var yMinBotao5 = 302
