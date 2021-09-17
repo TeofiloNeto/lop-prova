@@ -421,7 +421,7 @@ function telafase1(){
   fill(230, 232,250) // cor do texto iniciar
   text("0,003", 784, 333) // direção da fonte na tela
   //_________________________________________________________________________________________________________
-  // resposta lado esquerda CERTO
+  // resposta lado esquerda
   noFill()
    fill( 100)
    rect(xMinBotao6, yMinBotao6, 2* raio, 2*raio, 48);
@@ -674,23 +674,7 @@ function telafase1(){
   }
 
 function placarfinal(){
-textSize (80)
-textFont(fonteGeral)
-  image(grama,0,0, 1280,600)
-  image(ufrn , 900,20,160,66)
-  image(cet , 200,20,160,66)
-  fill(255)
-  text("Semi-Final",510, 160);
-  rect(520,187,180,60,48)
- fill(0)
- text(contador1,550, 240);
- text( "/" , 600,240)
- text(contador2,640, 240);
- fill(255)
- text( "Você" , 390,240)
- text( "Oponente" , 730,240)
- noFill()
-  fill(0)
+
  text(contadorplacar,200,200)
  text(contadorplacar2,200,280)
 //________________________________________________
@@ -779,7 +763,7 @@ if( contadorplacar > contadorplacar2){
 function draw(){
   if ( tela == 1 ){
     graficos();
-    telafase1();
+    
   }
   //_______________________
   if ( tela == 2 ){

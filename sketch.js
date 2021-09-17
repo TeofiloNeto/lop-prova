@@ -26,8 +26,18 @@ let grama;
 var raio = 25;
 var animaBolaEsquerda = false
 var animaBolaDireita = false
+
 var contador1 = 0
 var contador2 = 0
+var contador2nivel1 = 0
+var contador2nivel2 = 0
+var contadorproxfase = 0
+var contadorverif2 = 0
+var contadorverif3 = 0
+var contadorverif4 = 0
+
+
+
 var contador3 = 0
 var contadorgol = 0
 var contadorerrou = 0
@@ -65,8 +75,8 @@ var yMaxBotao3 = yMinBotao3 + alturaBotao;
 var yMinBotao4 = yMinBotao+370;
 var yMaxBotao4 = yMinBotao4+alturaBotao;
 
-var tela = 0.1;
-//var tela = 7;
+var tela = 1;
+//var tela = 8;
 //______________________________________________
 var yMinBotao5 = 302
 var yMaxBotao5 = 302 + 50
@@ -339,8 +349,7 @@ fill( 100)
   tempoG++;
    if (contagemdepontos == true){
     contador1 = contador1 + 1
-    contagemdepontos = false
-    
+    contagemdepontos = false    
     
   }
  }
@@ -836,37 +845,166 @@ text("23",450, 335 )
 
 //__________________________________________________________________________________________
 function placarfinal(){
-textSize (120)
-textFont(fonteGeral)
-  image(grama,0,0, 1280,600)
-  image(ufrn , 900,20,160,66)
-  image(cet , 200,20,160,66)
-  fill(255)
-  rect(440,155,350,100,48)
- fill(0)
- text(contador1,500, 240);
- text( "/" , 600,240)
- text(contador2,690, 240);
- fill(255)
- text( "Você" , 280,240)
- text( "Oponente" , 810,240)
- noFill()
-  fill(0)
-
- if( contador1 > contador2){
+  textSize (120)
+  textFont(fonteGeral)
+    image(grama,0,0, 1280,600)
+    image(ufrn , 900,20,160,66)
+    image(cet , 200,20,160,66)
+    fill(255)
+    rect(440,155,350,100,48)
+   fill(0)
+   text(contador1,500, 240);
+   text( "/" , 600,240)
+   text(contador2,690, 240);
    fill(255)
-   textSize(140)
-  text( "Você Ganhou" , 400,400)
-}if(contador1<contador2){
-  fill(255)
-  textSize(140)
-  text( "Você Perdeu" , 400,400)
-}if(contador1==contador2){
-  fill(255)
-  textSize(140)
-  text( "Empate" , 500,400)
-}
-}
+   text( "Você" , 280,240)
+   text( "Oponente" , 810,240)
+   noFill()
+    fill(0)
+  
+   if( contador1 > contador2){
+     fill(255)
+     textSize(140)
+    text( "Você Ganhou" , 400,400)
+  }if(contador1<contador2){
+    fill(255)
+    textSize(140)
+    text( "Você Perdeu" , 400,400)
+  }if(contador1==contador2){
+    fill(255)
+    textSize(140)
+    text( "Empate" , 500,400)
+  }
+    if(tela = 6){
+      contadorproxfase = contadorproxfase +1
+    }
+    if(contadorproxfase > 10){
+      contadorproxfase = 10
+    }
+  
+
+   if (contadorproxfase == 10){
+    if (mouseX > xMinBotao && mouseX < xMaxBotao && mouseY > yMinBotao4 && mouseY < yMaxBotao4 ){
+      fill(0,255,51)
+      if (mouseIsPressed ){
+       tela = tela + 1 //<--------------------------------------------- TROCAR DE TELA DA FASE
+        contador3 = 0
+        x = bolainicioX
+        y = bolainicioY
+        animaBolaDireita = false
+        animaBolaEsquerda = false
+        contagemdepontos = true
+        imagemgol=false
+        imagemerrou=false
+        contadorgol = false
+        contadorerrou = false
+        framesGol=0
+        framesErrou = 0
+        
+      } 
+    }
+      rect(xMinBotao, yMinBotao4, larguraBotao, alturaBotao, 48);
+      fill(230, 232,250) // cor do texto do botão
+      textSize(50)
+      fill(0)
+      text("Prox Fase", 550, 560) // direção da fonte na tela  
+
+   }
+  }
+
+
+  function placarfinal2(){
+    textSize (120)
+    textFont(fonteGeral)
+      image(grama,0,0, 1280,600)
+      image(ufrn , 900,20,160,66)
+      image(cet , 200,20,160,66)
+      fill(255)
+      rect(440,155,350,100,48)
+     fill(0)
+     text(contador1,500, 240);
+     text( "/" , 600,240)
+     text(contador2,690, 240);
+     fill(255)
+     text( "Você" , 280,240)
+     text( "Oponente" , 810,240)
+     noFill()
+      fill(0)
+    
+     if( contador1 > contador2){
+       fill(255)
+       textSize(140)
+      text( "Você Ganhou" , 400,400)
+    }if(contador1<contador2){
+      fill(255)
+      textSize(140)
+      text( "Você Perdeu" , 400,400)
+    }if(contador1==contador2){
+      fill(255)
+      textSize(140)
+      text( "Empate" , 500,400)
+    }
+  }
+  /*function placar2nivel(){
+     textSize (80)
+    textFont(fonteGeral)
+   image(grama,0,0, 1280,600)
+    image(ufrn , 900,20,160,66)
+    image(cet , 200,20,160,66)
+    fill(255)
+    text("Semi-Final",510, 160);
+    rect(520,187,180,60,48)
+    fill(0)
+    text(contador1,550, 240);
+    text( "/" , 600,240)
+    text(contador2,640, 240);
+    fill(255)
+    text( "Você" , 390,240)
+    text( "Oponente" , 730,240)
+    noFill()
+    
+    fill(255)
+    text("Final",560, 300);
+    rect(520,320,180,60,48)
+    fill(0)
+    text(contador2nivel1,550, 372);
+    text( "/" , 600,372)
+    text(contador2nivel2,640, 372);
+    fill(255)
+    text( "Você" , 390,372)
+    text( "Oponente" , 730,372)
+    noFill()
+    fill(0)
+  
+     if(contador1 > contador2){
+       fill(255)
+       textSize(50)
+      text( "Você Ganhou" , 950,240)
+     }
+     else{
+       fill(255)
+       textSize(55)
+      text( "Você Perdeu" , 950,240)
+     
+     }
+     if(contador2nivel1 > contador2nivel2){
+      fill(255)
+      textSize(50)
+     text( "Você Ganhou" , 950,370)
+    }
+    else{
+      fill(255)
+      textSize(55)
+     text( "Você Perdeu" , 950,370)
+    
+    }
+   
+     }
+
+*/
+
+
+
 function draw(){
   if ( tela == 1 ){
     graficos();
