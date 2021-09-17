@@ -112,7 +112,6 @@ function preload(){
   Goleiro2 = loadImage("goleiro2.png") ;
   Goleiro3 = loadImage("goleiro3.png") ;
   Gol = loadImage("gool.png");
-  errou= loadImage("ERROU.PNG");
   grama= loadImage("grama.png");
   campo3 = loadImage("campo54.jpg");
   ufrn = loadImage("ufrn.jpg"); 
