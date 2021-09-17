@@ -421,7 +421,7 @@ function telafase1(){
   fill(230, 232,250) // cor do texto iniciar
   text("0,003", 784, 333) // direção da fonte na tela
   //_________________________________________________________________________________________________________
-  // resposta lado esquerda
+  // resposta lado esquerda CERTO
   noFill()
    fill( 100)
    rect(xMinBotao6, yMinBotao6, 2* raio, 2*raio, 48);
