@@ -66,7 +66,7 @@ var yMinBotao4 = yMinBotao+370;
 var yMaxBotao4 = yMinBotao4+alturaBotao;
 
 var tela = 0.1;
-//var tela = 9;
+//var tela = 7;
 //______________________________________________
 var yMinBotao5 = 302
 var yMaxBotao5 = 302 + 50
@@ -620,10 +620,218 @@ if(contadorerrou == 1 || contadorgol == 1){
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++++++++++++++++++++++++++++++++++      INICIO FASE 2      +++++++++++++++++++++++++++++++++++++++++++++
+function telafase7(){
+  // resposta lado direita
+fill(255)
+textSize(30)
+text("0,003", 784, 333) // direção da fonte na tela
+//_________________________________________________________________________________________________________
+// resposta lado esquerda CERTA
+text("0,03",458, 333 ) // direção da fonte na tela
+ //_________________________________________________________________________________________________
+ // Texto da pergunta
+ textSize(35)
+ rect(490, 210, 320, 60, 48);
+ fill(0)
+ text("       A fração 3/100 ", 500, 240) // direção da fonte na tela
+ text("corresponde ao número decimal", 500, 260)
+//___________________________________________________________________________________
+ 
+ if (x == xResposta && y == yResposta){
+   contadorgol = 1
+   push()
+   noFill()
+   strokeWeight(5); 
+   stroke( 0,255,0)
+   rect(xMinBotao6, yMinBotao6, 2* raio, 2*raio, 48);
+   pop()
+ }
+ if( x == xDirRespota && y == yDirResposta){
+ contadorerrou = 1
+ push()
+ noFill()
+ strokeWeight(5); 
+ stroke( 255,0,0)
+ rect(xMinBotao5, yMinBotao5, 50, 50, 48);
+ pop()
+ }
+ if(contadorerrou == 1 || contadorgol == 1){
+  image(Goleiro3,540, 280, 320, 180)
+ }
+}
 
+function telafase8(){
+  // resposta lado direita
+fill(255)
+textSize(30)
+text("5,602", 785, 335) // direção da fonte na tela
+//_________________________________________________________________________________________________________
+// resposta lado esquerda certa
+text("5,062",453, 335 ) // direção da fonte na tela
+ //_________________________________________________________________________________________________
+ // Texto da pergunta
+ 
+ textSize(35)
+ rect(490, 210, 370, 60, 48);
+ fill(0)
+   textSize(35)
+   text(" O número decimal que é decomposto ", 500, 235) // direção da fonte na tela
+   text("      em 5 + 0,06 + 0,002 é", 500, 260)
+//___________________________________________________________________________________
+ 
+ if (x == xResposta && y == yResposta){
+   contadorgol = 1
+   push()
+   noFill()
+   strokeWeight(5); 
+   stroke( 0,255,0)
+   rect(xMinBotao6, yMinBotao6, 2* raio, 2*raio, 48);
+   pop()
+ }
+ if( x == xDirRespota && y == yDirResposta){
+ contadorerrou = 1
+ push()
+ noFill()
+ strokeWeight(5); 
+ stroke( 255,0,0)
+ rect(xMinBotao5, yMinBotao5, 50, 50, 48);
+ pop()
+ }
+ if(contadorerrou == 1 || contadorgol == 1){
+  image(Goleiro3,540, 280, 320, 180)
+ }
+}
 
+function telafase9(){
+  // resposta lado direita CERTA
+fill(255)  
+textSize(27)
+text("2.521", 788, 328) 
+text("____", 789, 332)
+text("990", 789, 348)// direção da fonte na tela
+//_________________________________________________________________________________________________________
+// resposta lado esquerda ERRADA 
+text("2.546",458, 328 )
+text("____",458, 332 )
+text("990",458, 348 ) // direção da fonte na tela
+ //_________________________________________________________________________________________________
+ // Texto da pergunta
+ textSize(34)
+ rect(490, 210, 400, 60, 48);
+ fill(0)
+ text("   Qual a fração que dá origem à  ", 500, 230) // direção da fonte na tela
+ text("dízima 2.54646 em representação decimal?", 500, 255)
+//___________________________________________________________________________________
+ 
+ if (x == xResposta && y == yResposta){
+   contadorerrou = 1
+   push()
+   noFill()
+   strokeWeight(5); 
+   stroke( 255,0,0)
+   rect(xMinBotao6, yMinBotao6, 2* raio, 2*raio, 48);
+   pop()
+ }
+ if( x == xDirRespota && y == yDirResposta){
+ contadorgol = 1
+ push()
+ noFill()
+ strokeWeight(5); 
+ stroke( 0,255,0)
+ rect(xMinBotao5, yMinBotao5, 50, 50, 48);
+ pop()
+ }
+ if(contadorerrou == 1 || contadorgol == 1){
+  //image(Goleiro3,540, 280, 320, 180)
+  image(Goleiro2,420, 280, 320, 180)
+ }
+}
 
+function telafase10(){
+  // resposta lado direita CERTA
+fill(255)  
+textSize(35)
+text("63%", 788, 335) 
 
+//_________________________________________________________________________________________________________
+// resposta lado esquerda ERRADA 
+text("50%",458, 335 )
+
+ //_________________________________________________________________________________________________
+ // Texto da pergunta
+ textSize(34)
+ rect(445, 210, 470, 60, 48);
+ fill(0)
+ text("  Ao jogar um dado, qual a probabilidade ", 440, 235) // direção da fonte na tela
+ text("de obtermos um número ímpar voltado para cima? ", 450, 255)
+//___________________________________________________________________________________
+ 
+ if (x == xResposta && y == yResposta){
+   contadorgol = 1
+   push()
+   noFill()
+   strokeWeight(5); 
+   stroke( 0,255,0)
+   rect(xMinBotao6, yMinBotao6, 2* raio, 2*raio, 48);
+   pop()
+ }
+ if( x == xDirRespota && y == yDirResposta){
+ contadorerrou = 1
+ push()
+ noFill()
+ strokeWeight(5); 
+ stroke( 255,0,0)
+ rect(xMinBotao5, yMinBotao5, 50, 50, 48);
+ pop()
+ }
+ if(contadorerrou == 1 || contadorgol == 1){
+  image(Goleiro3,540, 280, 320, 180)
+  //image(Goleiro2,420, 280, 320, 180)
+ }
+}
+
+function telafase11(){
+  // resposta lado direita Certa
+fill(255)  
+textSize(35)
+text("200", 788, 335) 
+
+//_________________________________________________________________________________________________________
+// resposta lado esquerda Errada
+text("23",450, 335 )
+
+ //_________________________________________________________________________________________________
+ // Texto da pergunta
+ textSize(34)
+ rect(440, 210, 470, 60, 48);
+ fill(0)
+ text(" Descubra a lógica e complete o próximo elemento: ", 440, 235) // direção da fonte na tela
+ text(" 2,10, 12, 16, 17, 18, 19, ? ", 520, 260)
+//___________________________________________________________________________________
+ 
+ if (x == xResposta && y == yResposta){
+   contadorerrou = 1
+   push()
+   noFill()
+   strokeWeight(5); 
+   stroke( 255,0,0)
+   rect(xMinBotao6, yMinBotao6, 2* raio, 2*raio, 48);
+   pop()
+ }
+ if( x == xDirRespota && y == yDirResposta){
+ contadorgol = 1
+ push()
+ noFill()
+ strokeWeight(5); 
+ stroke( 0,255,0)
+ rect(xMinBotao5, yMinBotao5, 50, 50, 48);
+ pop()
+ }
+ if(contadorerrou == 1 || contadorgol == 1){
+  image(Goleiro3,540, 280, 320, 180)
+  //image(Goleiro2,420, 280, 320, 180)
+ }
+}
 
 
 //__________________________________________________________________________________________
@@ -688,7 +896,37 @@ function draw(){
   if ( tela == 6 ){
     placarfinal();
   }
-  if(tela == 9){
+  if ( tela == 7 ){
+    graficos();
+    telafase7();
+  }
+  //______________________________
+  if ( tela == 8 ){
+    graficos();
+    telafase8();
+  }
+  //____________________________
+  if ( tela == 9 ){
+    graficos();
+    telafase9();
+  }
+  //______________________________
+  if ( tela == 10 ){
+    graficos();
+    telafase10();
+  }
+  if ( tela == 11 ){
+    graficos();
+    telafase11();
+  }
+  //________________________________
+  if ( tela == 12 ){
+    placarfinal2();
+  }
+
+//_________________________________________
+
+  if(tela == 0.4){
     graficos();
   }
   //__________________________
